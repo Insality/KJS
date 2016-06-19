@@ -5,8 +5,10 @@ var express = require('express'),
     app = express(),
     fs = require('fs');
 
-app.use(express.static('static'));
-app.use(express.static('projects'));
+app.use(express.static(__dirname + '/static'));
+app.use(express.static(__dirname + '/projects'));
+
+app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 
 
