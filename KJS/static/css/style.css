@@ -2,13 +2,28 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 body {}
+
+.header {
+    background: url('/img/header.jpg');
+}
 
 h1 {
     font: bold 60px/1.2em Arial;
     text-align: center;
     display: block;
     padding: 40px 0;
+    color: #fff;
 }
 
 .projects {
@@ -64,5 +79,15 @@ h1 {
     -moz-transition: all 0.5s ease-out;
     -webkit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
-  
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    background: url('/img/footer.jpg');
+    display: block;
+    height: 80px;
+    flex: 0 0 auto;
 }

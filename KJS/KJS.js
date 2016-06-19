@@ -36,6 +36,7 @@ function collectData() {
                         var config = JSON.parse(data);
                         
                         config["img_path"] = "/" + item + "/icon.png";
+                        config["link"] = item;
                         project_list.push(config);
                     });
                 }
