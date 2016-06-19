@@ -2,7 +2,7 @@ var express = require('express'),
 	path = require('path'),
 	app = express(),
 	fs = require('fs');
-
+	
 // Server Logic
 app.use(express.static(__dirname + '/static'));
 app.use(express.static(__dirname + '/projects'));
@@ -51,6 +51,6 @@ function collectData() {
 // TODO: Sort by create date?
 
 
-app.listen(80, function () {
+app.listen(8880, function () {
 	console.log('KJS Server started');
 });

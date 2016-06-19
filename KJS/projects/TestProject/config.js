@@ -5,5 +5,5 @@
     "create_date": "2016/06/19",
     "author": "Insality, Kate",
     "version": 1.0,
-    "size": "9 MB",
+    "size": "9 MB"
 }
