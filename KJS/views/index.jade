@@ -1,0 +1,22 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title KateJam Service
+    link(rel='stylesheet', href='/css/reset.css')
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    header.header
+      h1 KateJam Service
+    main.projects
+      each p in project_list
+        .project
+          .project__img
+            img(src=p.img_path, alt='')
+          .project__info
+            .project__name
+              = p.name
+            .project__description
+              | Lorem ipsum dolor sit amet.
+    footer.footer
+    h1 KateJam
