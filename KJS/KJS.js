@@ -13,7 +13,7 @@ app.set('view engine', 'jade');
 // Routes
 // TODO: Route every app with base template
 app.get('/', function (req, res) {
-	res.render('index', { project_list: project_list } );
+	res.render('projects', { project_list: project_list } );
 });
 
 
@@ -51,6 +51,6 @@ function collectData() {
 // TODO: Sort by create date?
 
 
-app.listen(8880, function () {
+app.listen(80, function () {
 	console.log('KJS Server started');
 });
