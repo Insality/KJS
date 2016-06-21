@@ -5,6 +5,7 @@
 html,
 body {
   height: 100%;
+  font-family: Roboto;
 }
 
 .wrapper {
@@ -24,12 +25,31 @@ body {
 }
 
 .footer {
-  background: #00BCD4;
-  font: 16px/1.2em Roboto;
+  background: #252525;
+  font: 14px/1.2em Roboto;
   color: #fff;
   display: block;
   padding: 30px 0;
   flex: 0 0 auto;
+}
+
+.footer a {
+  color: #ccc;
+}
+
+.footer .title {
+  margin-bottom: 10px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.footer ul li {
+  margin-bottom: 5px;
+}
+
+.logo {
+  padding: 30px 0;
+  display: block;
 }
 
 h1,
@@ -40,10 +60,31 @@ h5,
 h6 {
   font-family: Roboto;
   line-height: 1.2em;
+  margin-bottom: 10px;
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 12px;
 }
 
 .project {

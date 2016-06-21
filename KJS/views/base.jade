@@ -12,7 +12,8 @@ html(lang='en')
     .wrapper
       .header
         .container
-          h1 KateJam Server
+          a.logo(href='/')
+            img(src='/img/logo.png')
 
       block content
 
@@ -22,8 +23,8 @@ html(lang='en')
             .col-md-4
               | © 2016
             .col-md-4
-              h3 Insality
-               ul
+              p.title Insality
+              ul
                 li
                   a(href='#!') Insality links
                 li
@@ -31,7 +32,7 @@ html(lang='en')
                 li
                   a(href='#!') Insality links
             .col-md-4
-              h3 Pepsikat
+              p.title Pepsikat
               ul
                 li
                   a(href='#!') Pepsikat links
