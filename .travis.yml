@@ -3,9 +3,7 @@ node_js:
  - "stable"
 
 before_install:
- - sudo apt-get install sshpass
+ - sudo apt-get -y -qq install sshpass
 
 script:
- - echo $SSHPASS
- - sudo sshpass -e ssh root@45.55.134.136 /home/KJS/deploy.sh
-
+ - sshpass -e ssh root@45.55.134.136 /home/KJS/deploy.sh
