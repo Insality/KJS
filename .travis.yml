@@ -1,12 +1,15 @@
 language: node_js
-node_js: 
+node_js:
  - "stable"
 
 before_install:
  - sudo apt-get -y -qq install sshpass
 
-script: 
- - echo skip script
+before_script:
+ - "sshpass -e ssh root@45.55.134.136 /home/KJS/deploy.sh"
 
-deploy:
+script:
+ - echo 0
+
+after_success:
  - "sshpass -e ssh root@45.55.134.136 /home/KJS/deploy.sh"
