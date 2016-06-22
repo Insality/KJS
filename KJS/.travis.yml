@@ -2,4 +2,9 @@ language: node_js
 node_js: 
  - "stable"
 
- 
+before_install:
+ - sudo apt-get install sshpass
+
+install:
+ - sshpass -p $password ssh@45.55.134.136 /home/KJS/deploy.sh
+
