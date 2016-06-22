@@ -1,0 +1,42 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title KateJam Service
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext')
+    link(rel='stylesheet', href='/css/reset.css')
+    link(rel='stylesheet', href='/css/bootstrap-grid.css')
+    link(rel='stylesheet', href='/css/style.css')
+
+  body
+    .wrapper
+      .header
+        .container
+          a.logo(href='/')
+            img(src='/img/logo.png')
+
+      block content
+
+      footer.footer
+        .container
+          .row
+            .col-md-4
+              | © 2016
+            .col-md-4
+              p.title Insality
+              ul
+                li
+                  a(href='#!') Insality links
+                li
+                  a(href='#!') Insality links
+                li
+                  a(href='#!') Insality links
+            .col-md-4
+              p.title Pepsikat
+              ul
+                li
+                  a(href='#!') Pepsikat links
+                li
+                  a(href='#!') Pepsikat links
+                li
+                  a(href='#!') Pepsikat links

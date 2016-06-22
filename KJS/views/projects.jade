@@ -1,0 +1,27 @@
+extends ./base.jade
+
+block content
+  main.content
+    .container
+      .row
+        each p in project_list
+          .col-sm-6.col-md-4
+            .project
+              a.project__img(href=p.link)
+                img(src=p.img_path)
+                .project__hover-info
+                  .project__title
+                    = p.name
+                  .project__hide
+                    .project__full-description
+                      = p.full_description
+                    .project__date
+                      = p.create_date
+                    .project__author
+                       = p.author
+
+              .project__info
+                .project__size
+                    = p.size
+                .project__description
+                  = p.short_description
