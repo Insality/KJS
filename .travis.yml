@@ -6,5 +6,5 @@ before_install:
  - sudo apt-get install sshpass
 
 install:
- - sshpass -p $password ssh@45.55.134.136 /home/KJS/deploy.sh
+ - sshpass -p $password ssh root@45.55.134.136 /home/KJS/deploy.sh
 
