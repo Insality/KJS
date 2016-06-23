@@ -5,11 +5,5 @@ node_js:
 before_install:
  - sudo apt-get -y -qq install sshpass
 
-before_script:
- - "sshpass -e ssh root@45.55.134.136 /home/KJS/deploy.sh"
-
 script:
- - echo 0
-
-after_success:
- - "sshpass -e ssh root@45.55.134.136 /home/KJS/deploy.sh"
+ - "sshpass -e ssh -o 'StrictHostKeyChecking=no' root@45.55.134.136 /home/KJS/deploy.sh"
