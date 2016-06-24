@@ -1,0 +1,18 @@
+extends ../../views/base.jade
+
+block content
+	main.content
+		script(src='Coins/phaser.js')
+		script(src='Coins/js/main.js')
+		.container
+			.game__container
+				.game__title Coins
+				#game
+					script(type='text/javascript').
+						initGame(800, 800)
+				.game__description
+					| Simple Phaser prototype game. Control square with mouse and collect more and more coins!
+					br 
+					| Warning: addictive!
+
+
