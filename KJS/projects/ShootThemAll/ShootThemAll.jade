@@ -1,0 +1,32 @@
+extends ../../views/base.jade
+
+block content
+	main.content
+		
+		script(type='text/javascript', src='ShootThemAll/dmloader.js')
+		script(type='text/javascript', src='ShootThemAll/ShootThemAll.js', async='', onload='')
+
+		.container
+			.game__container
+				.game__title Shoot Them All!
+				#game
+					canvas#canvas.canvas-app-canvas(tabindex='0', width='960', height='640').no_cursor
+					button#fullscreen.button Fullscreen
+					script(type='text/javascript').
+						var extra_params = {
+							archive_location_filter: function( path ) {
+								return ("ShootThemAll/archive" + path + "");
+							},
+							splash_image: "ShootThemAll/splash_image.png",
+							custom_heap_size: 268435456
+						}
+						Module.runApp("canvas", extra_params);
+						document.getElementById("fullscreen").onclick = function (e) {
+							Module.toggleFullscreen();
+						};
+				.game__description
+					| Slay all of them! No Mercy!
+					| Control spaceship with mouse and press left-click to shoot!
+					br
+					| Made on Defold, Assets by Kenney.nl
+

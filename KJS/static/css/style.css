@@ -92,6 +92,10 @@ h6 {
   font-size: 12px;
 }
 
+.no_cursor {
+  cursor: none;
+}
+
 .project {
   background: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
@@ -184,6 +188,16 @@ h6 {
 
 .game__container {
   margin: auto;
+}
+
+canvas {
+    margin: auto;
+    display: block;
+}
+
+#fullscreen {
+  margin: auto;
+  display: block;
 }
 
 .game__title {
