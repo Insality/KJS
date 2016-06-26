@@ -1,7 +1,7 @@
 var express = require('express'),
 	path = require('path'),
-	app = express(),
-	fs = require('fs');
+	fs = require('fs'),
+	app = express();
 	
 // Server Logic
 app.use(express.static(__dirname + '/static'));
@@ -15,7 +15,6 @@ app.set('view engine', 'jade');
 app.get('/', function (req, res) {
 	res.render('projects', { project_list: project_list } );
 });
-
 
 
 // KJS Logic: 
@@ -41,14 +40,16 @@ function collectData() {
 						config["img_path"] = "/" + item + "/icon.png";
 						config["link"] = item;
 						project_list.push(config);
+
+						app.get('/'+item, function (req, res) {
+							res.render('../projects/' + item + '/' + item);
+						})
 					});
 				}
 			})
 		})
 	});
 }
-
-// TODO: Sort by create date?
 
 
 app.listen(80, function () {

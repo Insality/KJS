@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+ - "stable"
+
+branches:
+ only:
+  - deploy
+
+before_install:
+ - sudo apt-get -y -qq install sshpass
+
+script:
+ - "sshpass -e ssh -o 'StrictHostKeyChecking=no' root@45.55.134.136 /home/KJS/deploy.sh"
