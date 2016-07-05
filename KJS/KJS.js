@@ -52,6 +52,6 @@ function collectData() {
 }
 
 
-app.listen(80, function () {
+app.listen(8080, '127.0.0.1', function () {
 	console.log('KJS Server started');
 });
