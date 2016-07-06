@@ -20,3 +20,9 @@ scale = 0.02
 [script]
 shared_state = 1
 
+[library]
+include_dirs = libs
+
+[tracking]
+app_id = 66EA0E52AA97D5D4
+
