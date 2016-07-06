@@ -4,7 +4,7 @@
 
 KateJam server - simple multi-application server to host && show our projects.
 
-Try online: http://45.55.134.136/
+Try online: www.insality.com
 
 # Authors
 - [Insality](https://github.com/Insality)
