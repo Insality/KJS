@@ -4,8 +4,8 @@ var express = require('express'),
 	app = express();
 	
 // Server Logic
-app.use(express.static(__dirname + '/static'));
-app.use(express.static(__dirname + '/projects'));
+// app.use(express.static(__dirname + '/static'));
+// app.use(express.static(__dirname + '/projects'));
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
