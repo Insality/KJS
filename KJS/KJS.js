@@ -4,8 +4,8 @@ var express = require('express'),
 	app = express();
 	
 // Server Logic
-app.use(express.static(__dirname + '/static'));
-app.use(express.static(__dirname + '/projects'));
+// app.use(express.static(__dirname + '/static'));
+// app.use(express.static(__dirname + '/projects'));
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
@@ -52,6 +52,6 @@ function collectData() {
 }
 
 
-app.listen(80, function () {
+app.listen(8080, '127.0.0.1', function () {
 	console.log('KJS Server started');
 });
