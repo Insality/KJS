@@ -1,11 +1,14 @@
 var express = require('express'),
 	path = require('path'),
 	fs = require('fs'),
-	app = express();
+	app = express(),
+	config = require('./config');
 	
 // Server Logic
-app.use(express.static(__dirname + '/static'));
-app.use(express.static(__dirname + '/projects'));
+if (!config["production"]) {
+	app.use(express.static(__dirname + '/static'));
+	app.use(express.static(__dirname + '/projects'));
+}
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
