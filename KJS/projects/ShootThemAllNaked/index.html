@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type='text/javascript' src="/ShootThemAll/dmloader.js"></script>
+	<script type='text/javascript' src="/ShootThemAll/ShootThemAll.js" async='' onload=""></script>
+
+	<div id="app-container" class="canvas-app-container">
+	    <canvas id="canvas" class="canvas-app-canvas" tabindex="1" width="600" height="400"></canvas>
+	</div>
+
+	<script type='text/javascript'>
+		var extra_params = {
+		archive_location_filter: function( path ) {
+			return ("/ShootThemAll/archive" + path + "");
+		},
+		splash_image: "/ShootThemAll/splash_image.png",
+		custom_heap_size: 268435456
+	}
+	Module.runApp("canvas", extra_params);
+	</script>
+</body>
+</html>
+
+
