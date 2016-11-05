@@ -41,6 +41,10 @@ function collectData() {
 						config["img_path"] = "/" + item + "/icon.png";
 						config["link"] = item;
 						project_list.push(config);
+
+						project_list.sort(function(a, b) {
+							return (new Date(a["create_date"]) - new Date(b["create_date"])) < 0;
+						})
 						console.log("Added app: " + item);
 
 						app.get('/'+item, function (req, res) {
@@ -52,11 +56,6 @@ function collectData() {
 		})
 	});
 }
-
-project_list.sort(function(a, b) {
-	return (new Date(a["create_date"]) - new Date(b["create_date"])) > 0;
-})
-
 
 app.listen(8081, '127.0.0.1', function () {
 	console.log('KJS Server started');
