@@ -1,11 +1,14 @@
 var express = require('express'),
 	path = require('path'),
 	fs = require('fs'),
-	app = express();
+	app = express(),
+	config = require('./config');
 	
 // Server Logic
-app.use(express.static(__dirname + '/static'));
-app.use(express.static(__dirname + '/projects'));
+if (!config["production"]) {
+	app.use(express.static(__dirname + '/static'));
+	app.use(express.static(__dirname + '/projects'));
+}
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
@@ -16,11 +19,9 @@ app.get('/', function (req, res) {
 	res.render('projects', { project_list: project_list } );
 });
 
-
 // KJS Logic: 
 var project_list = [];
 collectData();
-
 
 function collectData() {
 	var project_path = path.join(__dirname, "/projects");
@@ -40,6 +41,7 @@ function collectData() {
 						config["img_path"] = "/" + item + "/icon.png";
 						config["link"] = item;
 						project_list.push(config);
+						console.log("Added app: " + item);
 
 						app.get('/'+item, function (req, res) {
 							res.render('../projects/' + item + '/' + item);
@@ -56,6 +58,6 @@ project_list.sort(function(a, b) {
 })
 
 
-app.listen(8080, '127.0.0.1', function () {
+app.listen(8081, '127.0.0.1', function () {
 	console.log('KJS Server started');
 });

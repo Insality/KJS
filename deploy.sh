@@ -1,6 +1,7 @@
-#!/bin/bash
+#!/bin/bash 
 
 cd /home/KJS
+git checkout deploy
 git pull
-killall nodejs
+pkill 'nodejs KJS.js'
 supervisorctl restart kjs
