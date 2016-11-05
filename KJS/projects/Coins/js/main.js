@@ -17,7 +17,7 @@ function initGame(w, h, parent){
 
 
 function preload(){
-	var projectFolder = "Coins/"
+	var projectFolder = "/Coins/"
 	game.load.image("back", projectFolder + "assets/back.png");
 	game.load.image("player", projectFolder + "assets/player.png");
 	game.load.image("coin", projectFolder + "assets/coin.png");
