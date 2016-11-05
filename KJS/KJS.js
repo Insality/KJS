@@ -54,7 +54,7 @@ function collectData() {
 }
 
 project_list.sort(function(a, b) {
-	return new Date(b["create_date"]) - new Date(a["create_date"]);
+	return (new Date(a["create_date"]) - new Date(b["create_date"])) > 0;
 })
 
 
