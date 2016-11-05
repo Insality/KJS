@@ -5,6 +5,6 @@ echo `date`
 cd /home/KJS
 git checkout deploy
 git pull
-pkill 'nodejs KJS.js'
+pkill -f 'nodejs KJS.js'
 supervisorctl restart kjs
 echo "=====" 
