@@ -2,6 +2,12 @@ var http = require('http')
 var createHandler = require('github-webhook-handler')
 var handler = createHandler({ path: '/webhook', secret: 'AwesomeSecretHook' })
 
+var sys = require('sys')
+var exec = require('child_process').exec;
+var deployCommand = "bash /home/KJS/deploy.sh >> /home/KJS/deploy.log";
+
+function puts(error, stdout, stderr) { sys.puts(stdout) }
+
 http.createServer(function (req, res) {
   handler(req, res, function (err) {
     res.statusCode = 404
@@ -17,6 +23,11 @@ handler.on('push', function (event) {
   console.log('Received a push event for %s to %s',
     event.payload.repository.name,
     event.payload.ref)
-    console.log(event.payload);
-    console.log(event);
+  var parsed = event.payload.ref.split("/");
+  var branchName = parsed[parsed.length-1];
+
+  if (branchName == "deploy") {
+    // call update script
+    exec(deployCommand, puts);
+  }
 })
