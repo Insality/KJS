@@ -7,4 +7,4 @@ git checkout deploy
 git pull
 pkill 'nodejs KJS.js'
 supervisorctl restart kjs
-echo "====="
+echo "=====" 
