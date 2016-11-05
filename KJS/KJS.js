@@ -51,7 +51,8 @@ function collectData() {
 							res.render('../projects/' + item + '/' + item);
 						})
 					});
-				} else {
+				}
+				/* else {
 					var index_path = path.join(project_path, "/" + item + "/index.html");
 					fs.exists(index_path, function(isExist){
 						if (isExist) {
@@ -61,7 +62,7 @@ function collectData() {
 							console.log("Added hided app: " + item);
 						}
 					})
-				}
+				}*/
 			})
 		})
 	});
