@@ -43,6 +43,7 @@ function collectData() {
 						config["img_path"] = "/" + item + "/icon.png";
 						config["link"] = item;
 						project_list.push(config);
+						console.log("Added app: " + item);
 
 						app.get('/'+item, function (req, res) {
 							res.render('../projects/' + item + '/' + item);
@@ -59,6 +60,6 @@ project_list.sort(function(a, b) {
 })
 
 
-app.listen(8080, '127.0.0.1', function () {
+app.listen(8081, '127.0.0.1', function () {
 	console.log('KJS Server started');
 });
