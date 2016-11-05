@@ -19,11 +19,9 @@ app.get('/', function (req, res) {
 	res.render('projects', { project_list: project_list } );
 });
 
-
 // KJS Logic: 
 var project_list = [];
 collectData();
-
 
 function collectData() {
 	var project_path = path.join(__dirname, "/projects");
@@ -56,7 +54,7 @@ function collectData() {
 }
 
 project_list.sort(function(a, b) {
-	return new Date(a["create_date"]) - new Date(b["create_date"]);
+	return new Date(b["create_date"]) - new Date(a["create_date"]);
 })
 
 
