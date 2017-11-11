@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd /home/KJS/KJS
-nodejs KJS.js
+cd /home/PSS/PSS
+nodejs PSS.js

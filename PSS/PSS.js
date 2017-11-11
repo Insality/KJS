@@ -19,7 +19,7 @@ app.get('/', function (req, res) {
 	res.render('projects', { project_list: project_list } );
 });
 
-// KJS Logic: 
+// PSS Logic: 
 var project_list = [];
 collectData();
 
@@ -58,5 +58,5 @@ function collectData() {
 }
 
 app.listen(8081, '127.0.0.1', function () {
-	console.log('KJS Server started');
+	console.log('PSS Server started');
 });

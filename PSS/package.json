@@ -1,5 +1,5 @@
 {
-  "name": "kjs",
+  "name": "pss",
   "version": "1.0.0",
   "description": "KateJamServer",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Insality/KJS.git"
+    "url": "git+https://github.com/Insality/PSS.git"
   },
   "keywords": [
     "Kate",
@@ -17,12 +17,12 @@
     "Projects",
     "Node"
   ],
-  "author": "Insality, Pepsikat",
+  "author": "Insality",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Insality/KJS/issues"
+    "url": "https://github.com/Insality/PSS/issues"
   },
-  "homepage": "https://github.com/Insality/KJS#readme",
+  "homepage": "https://github.com/Insality/PSS#readme",
   "dependencies": {
     "express": "^4.14.0",
     "github-webhook-handler": "^0.6.0",

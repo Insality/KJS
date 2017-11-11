@@ -4,7 +4,7 @@ var handler = createHandler({ path: '/webhook', secret: 'AwesomeSecretHook' });
 
 var sys = require('sys');
 var exec = require('child_process').exec;
-var deployCommand = "bash /home/KJS/deploy.sh >> /home/KJS/deploy.log";
+var deployCommand = "bash /home/PSS/deploy.sh >> /home/PSS/deploy.log";
 
 function puts(error, stdout, stderr) { sys.puts(stdout) };
 

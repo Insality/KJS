@@ -1,10 +1,8 @@
-# KJS, KateJam Server
+# PSS, Personal Site Server
 
-KateJam server - simple multi-application server to host && show our projects.
+PSS - my personal blog site and my projects showcase.
 
 Try online: www.insality.com
 
 # Authors
 - [Insality](https://github.com/Insality)
-- [Pepsikat](https://github.com/Pepsikat)
-

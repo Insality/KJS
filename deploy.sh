@@ -2,9 +2,9 @@
 
 echo ""
 echo `date`
-cd /home/KJS
+cd /home/PSS
 git checkout deploy
 git pull
-pkill -f 'nodejs KJS.js'
-supervisorctl restart kjs
+pkill -f 'nodejs PSS.js'
+supervisorctl restart pss
 echo "=====" 
